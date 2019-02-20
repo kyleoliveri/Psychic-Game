@@ -12,7 +12,7 @@
 </head>
 <body background="assets/images/irongrip.png">
     
-    <div class="wrapper">
+<div class="wrapper">
 
 <!--JUMBOTRON HEADER-->
 <header>
@@ -25,37 +25,40 @@
     </div>
 </header>
 
+
 <!--GAME SECTION-->
 <div class="container">
         <div class="row">
 
-          <div class="col-6 text-center game-section">
+            <!--LEFT COLUMN-->
+            <div class="col-6 text-center game-section">
 
-            <h2>You win!</h2>
-            <h5>Press any key to play again!</h5>
-            <img id="puppetz" src="assets/images/MasterofPuppets.jpg" alt="metallica winner">
-            <img id="innuendo" src="assets/images/Innuendo.png" alt="queen winner">
-            <img id="cowboysFromHell" src="assets/images/cowboysfromhell.png" alt="pantera winner">
-            <img id="aliceInChains" src="assets/images/dirt.png" alt="alice in chains winner">
-            
-            <h2>You lose!</h2>
-            <h5>Press any key to play again!</h5>
-            <img id="youLose" src="assets/images/youLose.png" alt="You lose">
+                <h2 id="winner1">You win!</h2>
+                <h5 id="winner2">Press any key to play again!</h5>
+                <img id="puppetz" src="assets/images/MasterofPuppets.jpg" alt="">
+                <img id="innuendo" src="assets/images/Innuendo.png" alt="">
+                <img id="cowboysFromHell" src="assets/images/cowboysfromhell.png" alt="">
+                <img id="aliceInChains" src="assets/images/dirt.png" alt="">
+                
+                <h2 id="loser1">You lose!</h2>
+                <h5 id="loser2">Press any key to play again!</h5>
+                <img id="youLose" src="assets/images/youLose.png" alt="">
 
-          </div>
+            </div>
 
-          <div class="col-6 text-center game-section">
+            <!--RIGHT COLUMN-->
+            <div class="col-6 text-center game-section">
 
-            <h4 class="winsh4">Wins: </h4>
-            <h5 id="wins"></h5>
-            <h4>Current Song</h4>
-            <h3 id="songName"></h3>
-            <h4>Guesses Remaining</h4>
-            <h6 id="guessesRemaining"></h6>
-            <h4>Letters Guessed</h4>
-            <h3 id="lettersGuessed"></h3>
+                <h4>Current Song</h4>
+                <h4 id="songName"></h4>
+                <h4>Guesses Remaining</h4>
+                <h6 id="guessesRemaining"></h6>
+                <h4>Letters Guessed</h4>
+                <h3 id="lettersGuessed"></h3>
+                <h4 id="winsh4"></h4>
+                <h4 id="lossh4"></h5>
 
-          </div>
+            </div>
 
         </div>
 </div>
@@ -68,9 +71,13 @@
 <!--FOOTER-->
 <footer class="footer"></footer>
 
+</body>
+<script>
+
+    gameReset();
+    updateDisplay();
+
+</script>
 <script src="assets/javascript/game.js"></script>
 
-
-
-</body>
 </html>
