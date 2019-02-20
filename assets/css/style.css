@@ -1,0 +1,47 @@
+
+/* MAIN */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    color: white;
+    font-family: 'Metal Mania', cursive;
+    letter-spacing: 3px;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+.footer,
+.push {
+    height: 50px;
+}
+
+/* JUMBOTRON HEADER */
+.jumbotron {
+  background-color: black;
+  background: rgba(0, 0, 0, 0.199);
+}
+.h1Header {
+    font-family: 'Metal Mania', cursive;
+    color: white;
+    letter-spacing: 3px;
+}
+.pHeader {
+    font-size: 24px;
+    font-family: 'Metal Mania', cursive;
+    letter-spacing: 3px;
+    color: white;
+}
+  
+/* GAME BODY */
+.jumbotron-fluid {
+    background: none;
+    color: lightgray;
+}
+.game-section {
+  border: solid white 3px;
+}
+
+/* TESTING */

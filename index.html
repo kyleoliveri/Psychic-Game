@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hangman | Kyle Oliveri</title>
+</head>
+<body background="assets/images/irongrip.png">
+    
+    <div class="wrapper">
+
+<!--JUMBOTRON HEADER-->
+<header>
+    <div class="headerwrap">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center h1Header">Heavy Metal Hangman</h1>
+            <p class="lead text-center pHeader">Type to play!</p>
+            <p class="text-center pHeader">Guess the word to hear a heavy classic!</p>
+        </div>
+    </div>
+</header>
+
+<!--GAME SECTION-->
+<div class="container">
+        <div class="row">
+
+          <div class="col-6 text-center game-section">
+
+            <h2>You win!</h2>
+            <h5>Press any key to play again!</h5>
+            <img id="puppetz" src="assets/images/MasterofPuppets.jpg" alt="metallica winner">
+            <img id="innuendo" src="assets/images/Innuendo.png" alt="queen winner">
+            <img id="cowboysFromHell" src="assets/images/cowboysfromhell.png" alt="pantera winner">
+            <img id="aliceInChains" src="assets/images/dirt.png" alt="alice in chains winner">
+            
+            <h2>You lose!</h2>
+            <h5>Press any key to play again!</h5>
+            <img id="youLose" src="assets/images/youLose.png" alt="You lose">
+
+          </div>
+
+          <div class="col-6 text-center game-section">
+
+            <h4 class="winsh4">Wins: </h4>
+            <h5 id="wins"></h5>
+            <h4>Current Song</h4>
+            <h3 id="songName"></h3>
+            <h4>Guesses Remaining</h4>
+            <h6 id="guessesRemaining"></h6>
+            <h4>Letters Guessed</h4>
+            <h3 id="lettersGuessed"></h3>
+
+          </div>
+
+        </div>
+</div>
+
+
+
+<div class="push"></div>
+</div>
+
+<!--FOOTER-->
+<footer class="footer"></footer>
+
+<script src="assets/javascript/game.js"></script>
+
+
+
+</body>
+</html>
