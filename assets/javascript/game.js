@@ -31,18 +31,14 @@ var songs = [
     "innuendo"
 ];
 var currentWordIndex;
-var remainingGuesses = 0;
+var remainingGuesses;
 var wins = 0;
 var losses = 0;
-var gameStart = false;
 var gameFinish = false;
 const maxAttempts = 12;
 
 //MUSIC
-var metallicaSong = new Audio("/assets/songs/metallica-WelcomeHome(Sanitarium).mp3");
-var panteraSong = new Audio("/assets/songs/pantera-Domination.mp3");
-var aliceInChainsSong = new Audio("/assets/songs/aliceInChains-Would.mp3");
-var queenSong = new Audio("/assets/songs/queen-Innuendo.mp3");
+
 
 //DISPLAYS MAX ATTEMPS, CLEARS ARRAYS & HIDES IMAGES
 function gameReset() {
@@ -79,10 +75,12 @@ function updateDisplay() {
     document.getElementById("winsh4").innerText = ("Wins: " + wins);
     document.getElementById("lossh4").innerText = ("Losses: " + losses);
 
+    wordGuessText = "";
+
     for (var i = 0; i < wordGuess.length; i++) {
         wordGuessText += wordGuess[i];
     }
-    
+
     document.getElementById("songName").innerText = wordGuessText;
     document.getElementById("guessesRemaining").innerText = remainingGuesses;    
     document.getElementById("lettersGuessed").innerText = incorrectGuesses;
@@ -90,13 +88,16 @@ function updateDisplay() {
 };
 
 function evaluateGuess(letter) {
-    var positions = [];
-
+// console.log(letter);
     for (var i = 0; i < songs[currentWordIndex].length; i++) {
-        if(songs[currentWordIndex][i] === letter) {
-            positions.push(i);
+        
+        if(songs[currentWordIndex][i].toLowerCase() === letter.toLowerCase()) {
+            wordGuess[i] = letter;
         }
-    }
+    };
+        if(letter <= wordGuess) {
+            remainingGuesses--;
+        }
 };
 
 //CHECK FOR WINS
@@ -105,7 +106,6 @@ function checkForWin() {
         document.getElementById("winner1").style.cssText = "display: block";
         document.getElementById("winner2").style.cssText = "display: block";
         wins++;
-        metallicaSong.play();
         gameFinish = true;
     }
 };
@@ -116,7 +116,8 @@ function checkForLoss() {
     if (remainingGuesses <= 0) {
     document.getElementById("loser1").style.cssText = "display: block";
     document.getElementById("loser2").style.cssText = "display: block";
-    document.getElementById("youLose").src = "assets/images/youLose.jpg";
+    document.getElementById("youLose").style.cssText = "display: block";
+    losses++;
     gameFinish = true;
     }
 };
