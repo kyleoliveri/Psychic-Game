@@ -37,7 +37,22 @@ var losses = 0;
 var gameFinish = false;
 const maxAttempts = 12;
 
-//MUSIC
+//IMAGES ARRAY
+albums = [
+    "assets/images/MasterofPuppets.jpg",
+    "assets/images/Innuendo.png",
+    "assets/images/cowboysfromhell.png",
+    "assets/images/dirt.png",
+    "assets/images/youLose.png"
+];
+
+//SONG FILES ARRAY
+music =[
+    "assets/songs/metallica-WelcomeHome(Sanitarium).mp3",
+    "assets/songs/queen-Innuendo.mp3",
+    "assets/songs/pantera-Domination.mp3",
+    "assets/songs/aliceInChains-Would.mp3"
+];
 
 
 //DISPLAYS MAX ATTEMPS, CLEARS ARRAYS & HIDES IMAGES
@@ -116,10 +131,10 @@ function checkForLoss() {
     if (remainingGuesses <= 0) {
     document.getElementById("loser1").style.cssText = "display: block";
     document.getElementById("loser2").style.cssText = "display: block";
-    document.getElementById("youLose").style.cssText = "display: block";
     losses++;
     gameFinish = true;
     }
+
 };
 
 //MAKES GUESS
